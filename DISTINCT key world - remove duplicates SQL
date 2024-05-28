@@ -9,7 +9,6 @@ SELECT
 	COUNT(*)  AS TotalNumberRow
 FROM DupTestTable
 
-
 SELECT COUNT(*) AS TotalDistinctRow
 FROM 
 (SELECT DISTINCT firstname, lastname, emailaddress FROM DupTestTable) as A
@@ -27,11 +26,11 @@ INSERT INTO DupTestTable VALUES ('Syed', 'Abbas', 'syed0@adventure-works.com'),
 ('Syed', 'Abbas', 'syed0@adventure-works.com'),
 ('Syed', 'Abbas', 'syed0@adventure-works.com')
 
+
 -- This data now has duplicates, total number of rows is now higher compared to the total number os distinct rows.
 SELECT 
 	COUNT(*)  AS TotalNumberRow
 FROM DupTestTable
-
 
 SELECT COUNT(*) AS TotalDistinctRow
 FROM 
@@ -42,5 +41,5 @@ FROM
 SELECT * INTO NO_DupTestTable FROM (SELECT DISTINCT firstname, lastname, emailaddress FROM DupTestTable) AS A
 
 
--- dataset has no duplicates as in the begining of this video
+-- dataset has no duplicates, all duplicates has been filtered out
 SELECT * FROM NO_DupTestTable
