@@ -1,10 +1,10 @@
 USE AdventureWorks2012;
 
---selecting dataset to work withc contains 19,972 rows
+--selecting dataset to work with.
 SELECT * FROM DupTestTable
 
 
--- This data has no duplicates, total number of rows and total number os distinct rows are the same
+-- This data has no duplicates, total number of rows and total number of distinct rows are the same
 SELECT 
 	COUNT(*)  AS TotalNumberRow
 FROM DupTestTable
